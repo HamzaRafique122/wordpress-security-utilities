@@ -1,0 +1,14 @@
+# Disable directory browsing
+Options -Indexes
+
+# Protect wp-config.php
+<Files wp-config.php>
+order allow,deny
+deny from all
+</Files>
+
+# Block XML-RPC to prevent DDoS
+<Files xmlrpc.php>
+Order Deny,Allow
+Deny from all
+</Files>
